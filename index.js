@@ -14,5 +14,4 @@ import { toOptions } from './utils.js'
  * }
  */
 const options = toOptions({ Service, Router });
-
 (new Main(options)).init();

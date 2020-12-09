@@ -1,5 +1,5 @@
 import { Init, Service } from './Interface.js';
-import { mix } from './utils.js'
+import { mix } from './utils.js';
 class Ajax extends mix(Init, Service) {
   constructor() {
     super();

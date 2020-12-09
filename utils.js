@@ -12,7 +12,6 @@ export const mix = function mix(...mixins) {
     copyProperties(Mix, mixin); // 拷贝静态属性
     copyProperties(Mix.prototype, mixin.prototype); // 拷贝原型属性
   }
-
   return Mix;
 }
 
@@ -36,6 +35,8 @@ function copyProperties(target, source) {
 
 export const toOptions = params =>
   Object.entries(params).reduce((accumulator, currentValue) => {
+    console.log('currentValue',currentValue)
     accumulator[currentValue[0]] = new currentValue[1]()
+    console.log('accumulator',accumulator)
     return accumulator;
   }, {})

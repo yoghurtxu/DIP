@@ -3,6 +3,7 @@ class Main extends Init {
   constructor(options) {
     super();
     Object.assign(this, options);
+    console.log('this',this)
     this.options = options;
     this.render();
   }
